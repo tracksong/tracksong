@@ -1,0 +1,83 @@
+---
+layout: page
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .members-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .member-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            flex-basis: calc(50% - 20px); /* 50% 너비에서 gap을 뺀 값 */
+            max-width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-photo {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .member-name {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .member-role {
+            font-size: 1.2em;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .member-bio {
+            font-size: 1em;
+            color: #555;
+        }
+
+        @media screen and (max-width: 600px) {
+            .member-card {
+                flex-basis: 100%; /* 작은 화면에서는 한 줄에 하나씩 */
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <div class="members-container">
+            {% assign sorted_members = site.members | sort: 'importance' %}
+            {% for member in sorted_members %}
+            <div class="member-card">
+                <img src="{{ member.photo }}" alt="{{ member.name }}" class="member-photo">
+                <h3 class="member-name">{{ member.name }}</h3>
+                <p class="member-role">{{ member.role }}</p>
+                <p class="member-bio">{{ member.bio }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

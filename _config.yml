@@ -22,9 +22,9 @@ title: "AI Ars Nova"
 description: "Explore music via AI."
 baseurl: "" # baseurl: "/so-simple-theme"
 url: "https://aiarsnova.github.io" # url: "https://mmistakes.github.io"
-logo: "/images/so-simple-site-logo.png"
+logo: "/images/aiarsnova_logo_circle.png" # "/images/so-simple-site-logo.png"
 date_format: "%B %-d, %Y"
-read_time: true
+read_time: false
 words_per_minute: # 200
 mathjax:
   enable: true
@@ -87,7 +87,10 @@ collections:
   music:
     output: true
     permalink: /:collection/:path/
-
+  members:
+    output: true
+    permalink: /:collection/:path/
+    
 # Front Matter Defaults
 defaults:
   # Post defaults
@@ -109,32 +112,38 @@ defaults:
 
 # Site Author
 author:
-  name: Michael Rose
-  picture: /images/michael-rose-photo.jpg
+  name: AI Ars Nova # Michael Rose
+  picture: /images/aiarsnova_logo_circle.png # /images/michael-rose-photo.jpg
   email:
-  twitter: mmistakes
+  twitter: # mmistakes
   links:
-    - title: Twitter
-      url: https://twitter.com/mmistakes
-      icon: fab fa-twitter-square
-    - title: Instagram
-      url: https://instagram.com/mmistakes
-      icon: fab fa-instagram
+    # - title: Twitter
+    #   url: https://twitter.com/mmistakes
+    #   icon: fab fa-twitter-square
+    # - title: Instagram
+    #   url: https://instagram.com/mmistakes
+    #   icon: fab fa-instagram
     - title: GitHub
-      url: https://github.com/mmistakes
+      url: https://github.com/aiarsnova
       icon: fab fa-github-square
+    - title: YouTube
+      url: https://www.youtube.com/@AIArsNova
+      icon: fab fa-youtube
 
 # Footer Links
 footer_links:
-  - title: Twitter
-    url: https://twitter.com/mmistakes
-    icon: fab fa-twitter-square
-  - title: Instagram
-    url: https://instagram.com/mmistakes
-    icon: fab fa-instagram
+  # - title: Twitter
+    # url: https://twitter.com/mmistakes
+    # icon: fab fa-twitter-square
+  # - title: Instagram
+    # url: https://instagram.com/mmistakes
+    # icon: fab fa-instagram
   - title: GitHub
-    url: https://github.com/mmistakes
+    url: https://github.com/aiarsnova
     icon: fab fa-github-square
-  - title: Feed
-    url: atom.xml
-    icon: fas fa-rss-square
+  # - title: Feed
+  #   url: atom.xml
+  #   icon: fas fa-rss-square
+  - title: YouTube
+    url: https://www.youtube.com/@AIArsNova
+    icon: fab fa-youtube

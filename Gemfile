@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gemspec
+# gemspec
 
 # gem "jekyll"
 # gem "jekyll-theme-so-simple", :git => "https://github.com/mmistakes/so-simple-theme.git", :branch => "rebuild"
