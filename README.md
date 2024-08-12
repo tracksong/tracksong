@@ -50,8 +50,8 @@ So Simple is a simple [Jekyll theme](https://jekyllrb.com/docs/themes/) for your
 [posts-tag-source]: docs/tags.md
 [category-page-preview]: https://mmistakes.github.io/so-simple-theme/categories/edge-case/
 [category-page-source]: docs/edge-case.md
-[grid-view-preview]: https://mmistakes.github.io/so-simple-theme/recipes/
-[grid-view-source]: docs/recipes.md
+[grid-view-preview]: https://mmistakes.github.io/so-simple-theme/music/
+[grid-view-source]: docs/music.md
 
 Additional [sample posts](https://mmistakes.github.io/so-simple-theme/posts/) can be view on the demo site. Source files for these (and the entire demo site) can be found in [`/docs`](docs) folder.
 
@@ -625,13 +625,13 @@ sort_by: # date (default) title
 sort_order: # forward (default), reverse
 ```
 
-To create a page showing all documents in the `recipes` collection you'd create `recipes.md` in the root of your project and add this front matter:
+To create a page showing all documents in the `music` collection you'd create `music.md` in the root of your project and add this front matter:
 
 ```yaml
-title: Recipes
+title: Music
 layout: collection
-permalink: /recipes/
-collection: recipes
+permalink: /music/
+collection: music
 ```
 
 By default, documents are shown in a list view. To change to a grid view add `entries_layout: grid` to the page's front matter. If you want to sort the collection by title add `sort_by: title`. If you want reverse sorting, add `sort_order: reverse`. If you are simply looking for a list that shows recipe titles (no excerpts), add `show_excerpts: false`.
