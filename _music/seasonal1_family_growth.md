@@ -2,8 +2,8 @@
 title: "Seasonal Music Series: Family and Growth in May"
 date: 2024-05-24
 image: 
-  path: /images/seasonal1_family_and_growth.png
-  thumbnail: /images/seasonal1_family_and_growth.png
+  path: /images_music/seasonal1_family_and_growth.png
+  thumbnail: /images_music_smaller/seasonal1_family_and_growth.png
   caption: "Photo from AI Ars Nova"
 share: false
 ---

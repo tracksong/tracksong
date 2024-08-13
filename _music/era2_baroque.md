@@ -2,8 +2,8 @@
 title: "Classical Music by Era Series: Baroque"
 date: 2024-06-27
 image: 
-  path: /images/era_baroque.png
-  thumbnail: /images/era_baroque.png
+  path: /images_music/era_baroque.png
+  thumbnail: /images_music_smaller/era_baroque.png
   caption: "Photo from AI Ars Nova"
 share: false
 ---

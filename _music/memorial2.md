@@ -2,8 +2,8 @@
 title: "Classical Music for Memorial Series Vol.2"
 date: 2024-06-24
 image: 
-  path: /images/memorial2.png
-  thumbnail: /images/memorial2.png
+  path: /images_music/memorial2.png
+  thumbnail: /images_music_smaller/memorial2.png
   caption: "Photo from AI Ars Nova"
 share: false
 ---

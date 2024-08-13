@@ -2,8 +2,8 @@
 title: "Classical Music by Era Series: Pre-Classical"
 date: 2024-06-30
 image: 
-  path: /images/era_pre-classical.png
-  thumbnail: /images/era_pre-classical.png
+  path: /images_music/era_pre-classical.png
+  thumbnail: /images_music_smaller/era_pre-classical.png
   caption: "Photo from AI Ars Nova"
 share: false
 ---
