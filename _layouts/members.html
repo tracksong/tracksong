@@ -71,6 +71,7 @@ layout: page
         }
 
         .member-links {
+            font-size: 0.8em;
             margin-top: 10px;
         }
 
@@ -104,7 +105,7 @@ layout: page
                 </a>
                 <h3 class="member-name">{{ member.name }}</h3>
                 <p class="member-role">{{ member.role }}</p>
-                <div class="member-links">
+                <div class="member-links" style="margin-bottom: 15px;">
                     {% if member.website %}
                     <a href="{{ member.website }}" target="_blank"><i class="fas fa-home"></i> Website</a>
                     {% endif %}
@@ -115,7 +116,7 @@ layout: page
                     <a href="{{ member.github }}" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     {% endif %}
                 </div>
-                <p class="member-bio">{{ member.bio | truncatewords: 40, '...' }}</p>
+                <p class="member-bio" style="margin-bottom: 5px;">{{ member.bio | truncatewords: 40, '...' }}</p>
                 <a href="{{ member.url }}" class="more-link">Read more</a>
             </div>
             {% endfor %}

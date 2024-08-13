@@ -1,6 +1,6 @@
 {% if site.data.navigation %}
   <div class="navigation-wrapper">
-    <nav id="primary-nav" class="site-nav always-visible">
+    <nav id="primary-nav" class="site-nav">
       <ul>
         {%- for link in site.data.navigation -%}
           {%- if link.url contains '://' -%}
@@ -15,17 +15,17 @@
   </div><!-- /.navigation-wrapper -->
 {% endif %}
 
-<style>
-/* 기본적으로 메뉴를 항상 보이게 설정 */
-.always-visible {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  transform: none !important;
-}
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var nav = document.getElementById('primary-nav');
 
-/* 토글 버튼이 없어도 문제 없이 동작하도록 설정 */
-#menu-toggle {
-  display: none;
-}
-</style>
+    // JavaScript로 기본 display 설정을 강제
+    nav.style.display = 'block';
+    nav.style.visibility = 'visible';
+    nav.style.opacity = '1';
+    nav.style.transform = 'none';
+
+    // 필요시 추가적인 스타일 조정 가능
+    // nav.style.position = 'relative'; // 필요한 경우 위치 조정
+  });
+</script>
