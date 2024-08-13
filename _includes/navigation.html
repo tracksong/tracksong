@@ -1,7 +1,6 @@
 {% if site.data.navigation %}
   <div class="navigation-wrapper">
-    <a href="#menu-toggle" id="menu-toggle">{{ site.data.text[site.locale].menu_label | default: 'Menu' }}</a>
-    <nav id="primary-nav" class="site-nav animated drop">
+    <nav id="primary-nav" class="site-nav always-visible">
       <ul>
         {%- for link in site.data.navigation -%}
           {%- if link.url contains '://' -%}
@@ -15,3 +14,18 @@
     </nav>
   </div><!-- /.navigation-wrapper -->
 {% endif %}
+
+<style>
+/* 기본적으로 메뉴를 항상 보이게 설정 */
+.always-visible {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* 토글 버튼이 없어도 문제 없이 동작하도록 설정 */
+#menu-toggle {
+  display: none;
+}
+</style>

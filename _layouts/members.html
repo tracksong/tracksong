@@ -55,6 +55,34 @@ layout: page
         .member-bio {
             font-size: 1em;
             color: #555;
+            max-height: 4.5em; /* 3줄 정도 보여줍니다 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* 원하는 줄 수로 설정 */
+            -webkit-box-orient: vertical;
+        }
+
+        .more-link {
+            color: #007BFF;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .member-links {
+            margin-top: 10px;
+        }
+
+        .member-links a {
+            margin: 0 5px;
+            color: #555;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .member-links a:hover {
+            color: #000;
         }
 
         @media screen and (max-width: 600px) {
@@ -71,10 +99,24 @@ layout: page
             {% assign sorted_members = site.members | sort: 'importance' %}
             {% for member in sorted_members %}
             <div class="member-card">
-                <img src="{{ member.photo }}" alt="{{ member.name }}" class="member-photo">
+                <a href="{{ member.url }}">
+                    <img src="{{ member.photo }}" alt="{{ member.name }}" class="member-photo">
+                </a>
                 <h3 class="member-name">{{ member.name }}</h3>
                 <p class="member-role">{{ member.role }}</p>
-                <p class="member-bio">{{ member.bio }}</p>
+                <div class="member-links">
+                    {% if member.website %}
+                    <a href="{{ member.website }}" target="_blank"><i class="fas fa-home"></i> Website</a>
+                    {% endif %}
+                    {% if member.youtube %}
+                    <a href="{{ member.youtube }}" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                    {% endif %}
+                    {% if member.github %}
+                    <a href="{{ member.github }}" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    {% endif %}
+                </div>
+                <p class="member-bio">{{ member.bio | truncatewords: 40, '...' }}</p>
+                <a href="{{ member.url }}" class="more-link">Read more</a>
             </div>
             {% endfor %}
         </div>
