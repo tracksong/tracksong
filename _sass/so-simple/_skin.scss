@@ -1,3 +1,4 @@
+@use 'sass:color';
 /* ==========================================================================
    Base elements
    ========================================================================== */
@@ -32,18 +33,18 @@ blockquote {
 }
 
 .copyright {
-  color: lighten($text-color, 25%);
+  color: color.scale($text-color, $lightness: 25%);
   a {
-    color: lighten($text-color, 25%);
+    color: color.scale($text-color, $lightness: 25%);
   }
 }
 
 .taxonomy-title {
-  color: lighten($text-color, 60%);
+  color: color.scale($text-color, $lightness: 60%);
 }
 
 .taxonomy-count {
-  color: lighten($text-color, 50%);
+  color: color.scale($text-color, $lightness: 50%);
 }
 
 .taxonomy-index {
@@ -63,7 +64,7 @@ blockquote {
 }
 
 .back-to-top {
-  color: lighten($text-color, 50%);
+  color: color.scale($text-color, $lightness: 50%);
 }
 
 .site-nav {
@@ -187,7 +188,7 @@ td {
 
 /* Default notice */
 .notice {
-  @include notice(lighten($base-color, 90%));
+  @include notice(color.scale($base-color, $lightness: 90%));
 }
 
 /* Accent notice */
