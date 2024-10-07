@@ -3,14 +3,15 @@
    https://github.com/easy-designs/yiq-color-contrast
    ========================================================================== */
 @use "sass:math";
+@use 'sass:color';
 
    @function yiq-is-light(
     $color,
     $threshold: $yiq-contrasted-threshold
   ) {
-    $red: red($color);
-    $green: green($color);
-    $blue: blue($color);
+    $red: color.channel($color, "red");
+    $green: color.channel($color, "green");
+    $blue: color.channel($color, "blue");
 
     $yiq: math.div(($red*299)+($green*587)+($blue*114),1000);
 
