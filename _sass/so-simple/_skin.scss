@@ -18,7 +18,7 @@ a {
 }
 
 blockquote {
-  background-color: mix($background-color, $accent-color, 90%);
+  background-color: color.mix($background-color, $accent-color, 90%);
   border-left-color: $accent-color;
 }
 
@@ -96,7 +96,7 @@ blockquote {
 }
 
 .toc-wrapper {
-  border-color: mix(#fff, $border-color, 25%);
+  border-color: color.mix(#fff, $border-color, 25%);
 
   h2 {
     color: $base05;
@@ -132,12 +132,12 @@ blockquote {
 .pagination {
   li {
     a {
-      color: mix($text-color, $border-color, 50%);
+      color: color.mix($text-color, $border-color, 50%);
       border-color: $border-color;
 
       &.current,
       &.current.disabled {
-        @include yiq-contrasted(mix($text-color, $border-color, 50%));
+        @include yiq-contrasted(color.mix($text-color, $border-color, 50%));
       }
 
       &.disabled {
@@ -193,32 +193,32 @@ td {
 
 /* Accent notice */
 .notice--accent {
-  @include notice(mix(#fff, $accent-color, 70%));
+  @include notice(color.mix(#fff, $accent-color, 70%));
 }
 
 /* Primary notice */
 .notice--primary {
-  @include notice(mix(#fff, $primary-color, 70%));
+  @include notice(color.mix(#fff, $primary-color, 70%));
 }
 
 /* Warning notice */
 .notice--warning {
-  @include notice(mix(#fff, $warning-color, 70%));
+  @include notice(color.mix(#fff, $warning-color, 70%));
 }
 
 /* Success notice */
 .notice--success {
-  @include notice(mix(#fff, $success-color, 70%));
+  @include notice(color.mix(#fff, $success-color, 70%));
 }
 
 /* Danger notice */
 .notice--danger {
-  @include notice(mix(#fff, $danger-color, 70%));
+  @include notice(color.mix(#fff, $danger-color, 70%));
 }
 
 /* Info notice */
 .notice--info {
-  @include notice(mix(#fff, $info-color, 70%));
+  @include notice(color.mix(#fff, $info-color, 70%));
 }
 
 /* ==========================================================================
@@ -256,7 +256,7 @@ td {
       }
 
       &:hover {
-        @include yiq-contrasted(mix(#000, $color, 20%));
+        @include yiq-contrasted(color.mix(#000, $color, 20%));
       }
 
       &:visited {
