@@ -1,1 +1,12 @@
 {% seo %}
+
+{% comment %}
+	Added to support mastodon. Remove when SEO plugin natively supports this. MikeBowler Dec 2024 
+{% endcomment%}
+{%- for author_name in page.author -%}
+	{%- assign author = site.data.authors[author_name] -%}
+	{% if author.fediverse_creator %}
+		<meta name="fediverse:creator" content="{{author.fediverse_creator}}">
+	{% endif %}
+{%- endfor -%}
+
